@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:intelli_room/features/professor/course_models.dart';
 import 'package:intelli_room/features/professor/course_service.dart';
 import 'package:intl/intl.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+
+import '../../app/app_state.dart';
 
 class LectureManagementScreen extends StatefulWidget {
   final Course course;
@@ -123,7 +126,7 @@ class _LectureManagementScreenState extends State<LectureManagementScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _addLecture,
+        onPressed: () => _addLecture(context),
         child: const Icon(Icons.add),
       ),
     );

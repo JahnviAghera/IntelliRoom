@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:intelli_room/app/app_state_notifier.dart';
 import 'package:intelli_room/features/auth/auth_service.dart';
 import 'package:intelli_room/features/auth/login_screen.dart';
 import 'package:intelli_room/features/professor/professor_dashboard.dart';
 import 'package:intelli_room/features/student/student_dashboard.dart';
-import 'package:provider/provider.dart';
+
+import 'app/app_state.dart';
 
 void main() {
   runApp(
